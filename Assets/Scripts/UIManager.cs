@@ -25,11 +25,11 @@ namespace DefaultNamespace
 
         public enum UIMenu
         {
-            Main, Pause, Inventory
+            Main, Pause, Inventory, Achievement
         }
         
         [SerializeField]
-        public GameObject[] Menus = new GameObject[3];
+        public GameObject[] Menus = new GameObject[4];
 
         private void Start()
         {
@@ -40,8 +40,6 @@ namespace DefaultNamespace
                     Debug.LogWarning(menu.name + " is undefined in UIManager inspector");
                     continue;
                 }
-
-                
                 menu.gameObject.SetActive(false);
             }
         }
@@ -67,14 +65,14 @@ namespace DefaultNamespace
                 return;
             }
             
-            Debug.LogFormat("Toggling ui; activeMenu activeSelf: {0}, active in hierarchy {1}", activeMenu.activeSelf, activeMenu.activeInHierarchy);
+            Debug.LogFormat("Toggling ui; activeMenu activeSelf: {0}, active in hierarchy {1}", 
+                activeMenu.activeSelf, activeMenu.activeInHierarchy);
             
             if (activeMenu.activeInHierarchy)
             {
-                Debug.LogFormat("Toggling ui; activeMenu x: {0}, y: {1}, z: {2}", activeMenu.transform.position.x,activeMenu.transform.position.y,activeMenu.transform.position.z);
-
+                Debug.LogFormat("Toggling ui; activeMenu x: {0}, y: {1}, z: {2}", 
+                    activeMenu.transform.position.x,activeMenu.transform.position.y,activeMenu.transform.position.z);
                 activeMenu.gameObject.SetActive(false);
-                
             }
             else
             {

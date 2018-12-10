@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 
-public class PlayerObserver : MonoBehaviour
+public class PlayerListener
 {
-    void Start()
-    {
-        
-    }
+    
 }

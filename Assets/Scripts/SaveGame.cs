@@ -1,18 +1,37 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
-public class SaveGame : MonoBehaviour
+public class SaveGame
 {
-    // Start is called before the first frame update
-    void Start()
+    public SaveGame(PlayerProfile playerProfile)
     {
-        
-    }
+        Console.WriteLine("Before serialization the playerProfile contains: ");
+        playerProfile.Print();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //Opens a file and serializes the playerProfile into it in binary format.
+        Stream stream = File.Open(DateTime.Now.ToString("en-US").Replace('/','-') + ".xml", FileMode.Create);
+
+        var formatter = new BinaryFormatter();
+
+        formatter.Serialize(stream, playerProfile);
+        stream.Close();
+   
+        //Opens file "data.xml" and deserializes the playerProfile from it.
+        stream = File.Open("data.xml", FileMode.Open);
+        formatter = new BinaryFormatter();
+
+        //formatter = new BinaryFormatter();
+
+        playerProfile = (PlayerProfile)formatter.Deserialize(stream);
+        stream.Close();
+
+        Console.WriteLine("");
+        Console.WriteLine("After deserialization the playerProfile contains: ");
+        playerProfile.Print();
     }
 }
