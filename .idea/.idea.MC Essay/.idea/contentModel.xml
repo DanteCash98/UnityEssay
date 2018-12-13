@@ -9,12 +9,15 @@
         <e p="Scripts" t="Include">
           <e p="GameManager.cs" t="Include" />
           <e p="GameSettings.cs" t="Include" />
+          <e p="Input_Listener" t="Include">
+            <e p="KeyboardListener.cs" t="Include" />
+            <e p="MouseListener.cs" t="Include" />
+          </e>
           <e p="LoadGame.cs" t="Include" />
-          <e p="MouseLook.cs" t="Include" />
-          <e p="PlayerController.cs" t="Include" />
-          <e p="PlayerObserver.cs" t="Include" />
+          <e p="PlayerListener.cs" t="Include" />
           <e p="PlayerProfile.cs" t="Include" />
           <e p="SaveGame.cs" t="Include" />
+          <e p="UIAchievement.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
       </e>

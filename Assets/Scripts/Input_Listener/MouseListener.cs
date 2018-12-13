@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
-public class MouseLook : MonoBehaviour
+public class MouseListener : MonoBehaviour
 {
     public float mouseSensitivity = 100.0f;
     public float smoothing = 2.0f;
@@ -16,11 +16,17 @@ public class MouseLook : MonoBehaviour
     
     void Start ()
     {
-        character = this.transform.parent.gameObject;
+        character = transform.parent.gameObject;
         Cursor.lockState = CursorLockMode.Locked;
     }
  
     void Update ()
+    {
+        CameraLook();
+        
+    }
+
+    void CameraLook()
     {
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 
@@ -33,12 +39,5 @@ public class MouseLook : MonoBehaviour
         
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Confined ? 
-                Cursor.lockState = CursorLockMode.Locked : Cursor.lockState = CursorLockMode.Confined;
-            
-        }
     }
 }

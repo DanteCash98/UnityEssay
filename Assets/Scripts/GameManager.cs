@@ -35,7 +35,7 @@ namespace DefaultNamespace
             
             DontDestroyOnLoad(gameObject);
             
-            GenerateMap(new GameSettings());
+            //enerateMap(new GameSettings());
         }
         
         private static void GenerateMap(GameSettings settings)

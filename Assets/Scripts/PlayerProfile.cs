@@ -9,6 +9,7 @@ public class PlayerProfile : MonoBehaviour
 {
     private string username;
 
+    private int playerLevel;
     private int distanceTraveled;
 
     public void Print()
