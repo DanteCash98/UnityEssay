@@ -17,10 +17,10 @@ public class KeyboardListener : MonoBehaviour
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 10.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * 10.0f;
 
-        if (Input.GetKey(KeyCode.Space) && PlayerListener.CurrentState != PlayerListener.State.Airborne)
+        if (Input.GetKeyDown(KeyCode.Space) && PlayerListener.CurrentState != PlayerListener.State.Airborne)
         {
             y = Time.deltaTime * 10.0f;
-            PlayerListener.CurrentState = PlayerListener.State.Airborne;
+            //PlayerListener.CurrentState = PlayerListener.State.Airborne;
         }
 
         transform.Translate(x, y, z);

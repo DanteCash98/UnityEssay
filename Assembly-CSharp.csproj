@@ -57,6 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enitity_AI\Entity.cs" />
+    <Compile Include="Assets\Scripts\Enitity_AI\EntitySpawner.cs" />
+    <Compile Include="Assets\Scripts\Enitity_AI\EntityTurtle.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Input_Listener\KeyboardListener.cs" />
@@ -65,8 +68,9 @@
     <Compile Include="Assets\Scripts\PlayerListener.cs" />
     <Compile Include="Assets\Scripts\PlayerProfile.cs" />
     <Compile Include="Assets\Scripts\SaveGame.cs" />
-    <Compile Include="Assets\Scripts\UIAchievement.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\UIAchievement.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\UIManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/dante/MC Essay/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

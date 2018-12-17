@@ -5,15 +5,13 @@ using System.Runtime.Serialization;
 using UnityEngine;
 
 [Serializable()]
-public class PlayerProfile : MonoBehaviour
+public class PlayerProfile
 {
-    private string username;
+    public string username;
 
-    private int playerLevel;
-    private int distanceTraveled;
+    public int playerLevel;
+    public int distanceTraveled;
 
-    public void Print()
-    {
-        Console.WriteLine(this.ToString());
-    }
+    public int credits;
+
 }

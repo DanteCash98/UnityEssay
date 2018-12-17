@@ -6,32 +6,15 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-public class SaveGame
+public static class SaveGame
 {
-    public SaveGame(PlayerProfile playerProfile)
+    public static void SavePlayer(PlayerProfile playerProfile)
     {
-        Console.WriteLine("Before serialization the playerProfile contains: ");
-        playerProfile.Print();
-
-        //Opens a file and serializes the playerProfile into it in binary format.
-        Stream stream = File.Open(DateTime.Now.ToString("en-US").Replace('/','-') + ".xml", FileMode.Create);
-
         var formatter = new BinaryFormatter();
+        String path = Application.persistentDataPath + DateTime.Now.ToString("en-US").Replace('/','-') + ".cash";
+        Stream stream = File.Open(path, FileMode.Create);
 
         formatter.Serialize(stream, playerProfile);
         stream.Close();
-   
-        //Opens file "data.xml" and deserializes the playerProfile from it.
-        stream = File.Open("data.xml", FileMode.Open);
-        formatter = new BinaryFormatter();
-
-        //formatter = new BinaryFormatter();
-
-        playerProfile = (PlayerProfile)formatter.Deserialize(stream);
-        stream.Close();
-
-        Console.WriteLine("");
-        Console.WriteLine("After deserialization the playerProfile contains: ");
-        playerProfile.Print();
     }
 }

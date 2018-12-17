@@ -1,3 +1,5 @@
+using System.Xml;
+using Boo.Lang;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -23,8 +25,14 @@ namespace DefaultNamespace
         }
         
         #endregion
-       
+
+        private PlayerProfile _playerProfile;
         private bool _isPaused = false;
+
+        private void Start()
+        {
+            _playerProfile = LoadGame.LoadPlayer();
+        }
 
         private void Awake()
         {
@@ -34,12 +42,6 @@ namespace DefaultNamespace
                 Destroy(gameObject);
             
             DontDestroyOnLoad(gameObject);
-            
-            //enerateMap(new GameSettings());
-        }
-        
-        private static void GenerateMap(GameSettings settings)
-        {
             
         }
 
@@ -51,6 +53,7 @@ namespace DefaultNamespace
                 Debug.Log("Toggling ui; is paused = " + _isPaused);
                 UIManager.Instance.ToggleUIElement(UIManager.UIMenu.Pause);
                 Time.timeScale = 0.0f;
+
             }
             else if (_isPaused)
             {
@@ -60,15 +63,12 @@ namespace DefaultNamespace
                 Time.timeScale = 1.0f;
             }
         }
-        
-        public static void SaveGame()
-        {
-            
-        }
 
-        public static void LoadGame()
+        
+        
+        public void Save()
         {
-            
+            SaveGame.SavePlayer(_playerProfile);
         }
     }
 }

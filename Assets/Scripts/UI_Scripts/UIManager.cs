@@ -25,7 +25,7 @@ namespace DefaultNamespace
 
         public enum UIMenu
         {
-            Main, Pause, Inventory, Achievement
+            Main, Pause, LoadGame, Achievement
         }
         
         [SerializeField]
@@ -65,13 +65,8 @@ namespace DefaultNamespace
                 return;
             }
             
-            Debug.LogFormat("Toggling ui; activeMenu activeSelf: {0}, active in hierarchy {1}", 
-                activeMenu.activeSelf, activeMenu.activeInHierarchy);
-            
             if (activeMenu.activeInHierarchy)
             {
-                Debug.LogFormat("Toggling ui; activeMenu x: {0}, y: {1}, z: {2}", 
-                    activeMenu.transform.position.x,activeMenu.transform.position.y,activeMenu.transform.position.z);
                 activeMenu.gameObject.SetActive(false);
             }
             else

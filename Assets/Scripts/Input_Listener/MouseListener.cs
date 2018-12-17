@@ -13,6 +13,7 @@ public class MouseListener : MonoBehaviour
     private Vector2 smoothV;
 
     private GameObject character;
+    private bool active = true;
     
     void Start ()
     {
@@ -39,5 +40,11 @@ public class MouseListener : MonoBehaviour
         
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+    }
+
+    public void ToggleEnabled()
+    {
+        this.enabled = !active;
+        active = !active;
     }
 }
