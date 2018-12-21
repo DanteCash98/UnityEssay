@@ -25,7 +25,7 @@ namespace DefaultNamespace
 
         public enum UIMenu
         {
-            Main, Pause, LoadGame, Achievement
+            Pause
         }
         
         [SerializeField]
@@ -64,15 +64,8 @@ namespace DefaultNamespace
                 Debug.LogWarning("UI element is undefined in UIManager inspector");
                 return;
             }
-            
-            if (activeMenu.activeInHierarchy)
-            {
-                activeMenu.gameObject.SetActive(false);
-            }
-            else
-            {
-                activeMenu.gameObject.SetActive(true);
-            }
+
+            activeMenu.gameObject.SetActive(!activeMenu.activeInHierarchy);
         }
     }
 }

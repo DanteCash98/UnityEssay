@@ -4,6 +4,8 @@
     <LangVersion>4</LangVersion>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <DisableHandlePackageFileConflicts>true</DisableHandlePackageFileConflicts>
+    <_TargetFrameworkDirectories>non_empty_path_generated_by_rider_editor_plugin</_TargetFrameworkDirectories>
+    <_FullFrameworkReferenceAssemblyPaths>non_empty_path_generated_by_rider_editor_plugin</_FullFrameworkReferenceAssemblyPaths>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
   <PropertyGroup>
@@ -64,8 +66,9 @@
     <Compile Include="Assets\Scripts\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Input_Listener\KeyboardListener.cs" />
     <Compile Include="Assets\Scripts\Input_Listener\MouseListener.cs" />
+    <Compile Include="Assets\Scripts\Input_Listener\PlayerListener.cs" />
     <Compile Include="Assets\Scripts\LoadGame.cs" />
-    <Compile Include="Assets\Scripts\PlayerListener.cs" />
+    <Compile Include="Assets\Scripts\PlayerMelee.cs" />
     <Compile Include="Assets\Scripts\PlayerProfile.cs" />
     <Compile Include="Assets\Scripts\SaveGame.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\PauseMenu.cs" />

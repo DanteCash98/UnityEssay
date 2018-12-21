@@ -27,7 +27,7 @@ namespace DefaultNamespace
         #endregion
 
         private PlayerProfile _playerProfile;
-        private bool _isPaused = false;
+        public bool isPaused = false;
 
         private void Start()
         {
@@ -38,7 +38,7 @@ namespace DefaultNamespace
         {
             if(_instance == null)
                 _instance = this;
-            else if(_instance !=this)
+            else if(_instance != this)
                 Destroy(gameObject);
             
             DontDestroyOnLoad(gameObject);
@@ -47,18 +47,18 @@ namespace DefaultNamespace
 
         public void TogglePauseMenu()
         {
-            if (!_isPaused)
+            if (!isPaused)
             {
-                _isPaused = true;
-                Debug.Log("Toggling ui; is paused = " + _isPaused);
+                isPaused = true;
+                Debug.Log("Toggling ui; is paused = " + isPaused);
                 UIManager.Instance.ToggleUIElement(UIManager.UIMenu.Pause);
                 Time.timeScale = 0.0f;
 
             }
-            else if (_isPaused)
+            else if (isPaused)
             {
-                _isPaused = false;
-                Debug.Log("Toggling ui; is paused = " + _isPaused);
+                isPaused = false;
+                Debug.Log("Toggling ui; is paused = " + isPaused);
                 UIManager.Instance.ToggleUIElement(UIManager.UIMenu.Pause);
                 Time.timeScale = 1.0f;
             }

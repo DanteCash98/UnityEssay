@@ -13,5 +13,5 @@ public class PlayerProfile
     public int distanceTraveled;
 
     public int credits;
-
+    
 }

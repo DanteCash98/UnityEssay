@@ -9,6 +9,8 @@ namespace DefaultNamespace
     public class Entity : MonoBehaviour
     {
         public GameObject entity;
+        
+        private LayerMask _deathMask;
 
         public Entity() {}
 
@@ -19,16 +21,25 @@ namespace DefaultNamespace
         
         private void Start()
         {
-            if (entity)
+            _deathMask = LayerMask.GetMask("Death");
+        }
+
+        private void FixedUpdate()
+        {
+            //If Entity reaches void, Destroy it
+            if (Physics.Raycast(transform.position, -Vector3.up, 1f, _deathMask))
             {
-                //Instantiate(entity);
+                Debug.Log(name + " Death layer hit from 1f");
+                Destroy(this);
             }
         }
 
         private void Awake()
         {
             if (!entity)
+            {
                 Debug.LogWarning("No GameObject for entity");
+            }
         }
     }
 }

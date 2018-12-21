@@ -2,76 +2,83 @@
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.Animations;
 
 public class EntityTurtle : Entity
 {
-    public float MoveSpeed = 0f;
+    private enum State
+    {
+        Idling, Seeking
+    }
+    
+    public float moveSpeed = 0f;
+    public float rotationSpeed = 0f;
+    public GameObject debugPathFlagObject;
+    public AnimationClip walkingAnimationClip;
     
     private Vector3 _direction;
-    private Rigidbody _rigidBody;
     private LayerMask _wallMask;
-    private LayerMask _groundMask;
+    private State currentState = State.Idling;
     
     private void Start()
     {   
         _wallMask = LayerMask.GetMask("Wall");
-        _wallMask = LayerMask.GetMask("Ground");
-        _rigidBody = GetComponent<Rigidbody>();
-        
-        StartCoroutine("SeekDestination");
+        Debug.Log("Turtle startin dat world!");
+
     }
 
     private void FixedUpdate()
     {
-        
-    }
-
-    IEnumerator SeekDestination()
-    {
-        var destination = getDestination();
-        transform.rotation = Quaternion.LookRotation(destination);
-        float x, z;
-        
-        while (transform.position != destination)
+        if (currentState == State.Idling)
         {
-            x = Time.deltaTime * MoveSpeed;
-            z = Time.deltaTime * MoveSpeed;
-            
-            transform.Translate(x,0f,z);
-            
-            if (Physics.Raycast(transform.position, transform.forward, 10f, _wallMask))
-            {
-                destination = getDestination();
-                Debug.Log(name + " Wall layer hit from 10f");
-            }
-            
-            yield return null;
+            StartCoroutine("SeekDestination");
+            Debug.Log("Turtle seeking dat destination!");
         }
 
+        //If Entity sees wall, stop seeking
+        if (Physics.Raycast(transform.position, transform.forward, 10f, _wallMask))
+        {
+            Debug.Log(name + " Wall layer hit from 10f");
+            StopCoroutine("SeekDestination");
+            currentState = State.Idling;
+        }
+        
         
     }
     
-    private void ChangeVelocity()
+    private IEnumerator SeekDestination()
     {
-        _direction = SetDirection();
-        _rigidBody.velocity = _direction * MoveSpeed;
+        currentState = State.Seeking;
         
-        transform.rotation = Quaternion.LookRotation(_direction);
-        
-        Debug.LogFormat(this.name + ": x={0}, y={1}, z={2}", 
-            _rigidBody.velocity.x, _rigidBody.velocity.y, _rigidBody.velocity.z );
-    }
-        
-    private Vector3 SetDirection()
-    {
-        var x = Random.Range(-3,3);
-        var z = Random.Range(-3,3);
-            
-        return new Vector3(x,0,z);
-    }
+        var destination = GetDestination();
+        var direction = destination - this.transform.position;
+        //measure direction on flat plane
+        direction.y = 0;
 
-    private Vector3 getDestination()
+        //rotate towards destination at set speed
+        transform.rotation =
+            Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+        
+        //Entity pauses before moving for aesthetic purposes
+        yield return new WaitForSeconds(2.5f);
+        
+        while (transform.position != destination)
+        {
+            transform.rotation =
+                Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+            transform.Translate(0f,0f, moveSpeed * Time.deltaTime);
+
+            //wait for next frame
+            yield return null;
+        }
+
+        currentState = State.Idling;
+        
+        yield return null;
+    }
+    
+    ///@return random vector of x and y relative to Entity position
+    private Vector3 GetDestination()
     {
         var turtlePos = transform.position;
 

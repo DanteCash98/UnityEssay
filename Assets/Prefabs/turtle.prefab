@@ -399,6 +399,8 @@ GameObject:
   - component: {fileID: 3092537226839916730}
   - component: {fileID: 3092537226839916678}
   - component: {fileID: 7415390627509395148}
+  - component: {fileID: 5684248233748828185}
+  - component: {fileID: 2818059901219724530}
   m_Layer: 0
   m_Name: turtle
   m_TagString: Untagged
@@ -422,7 +424,6 @@ Transform:
   - {fileID: 5194858520211840024}
   - {fileID: 5433810217138613689}
   - {fileID: 8318466743068771244}
-  - {fileID: 6641850276825721252}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -514,34 +515,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 3092537226839916729, guid: 302c96109fbf35c4aab6d624275d5f40, type: 3}
-  MoveSpeed: 1
---- !u!1 &3869539969936480374
-GameObject:
+  moveSpeed: 2
+  rotationSpeed: 1
+  debugPathFlagObject: {fileID: 0}
+  walkingAnimationClip: {fileID: 7400000, guid: a3f53d531f01d7a468ac610df26d3f83,
+    type: 2}
+--- !u!95 &5684248233748828185
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6641850276825721252}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6641850276825721252
-Transform:
+  m_GameObject: {fileID: 3092537226839916729}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 38e53e160516ce44286a30a905ef4659, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &2818059901219724530
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3869539969936480374}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3092537226839916677}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 3092537226839916729}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a3f53d531f01d7a468ac610df26d3f83, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
