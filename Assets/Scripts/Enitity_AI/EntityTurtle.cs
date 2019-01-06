@@ -18,12 +18,13 @@ public class EntityTurtle : Entity
     
     private Vector3 _direction;
     private LayerMask _wallMask;
+    private Animator anim;
     private State currentState = State.Idling;
     
     private void Start()
     {   
         _wallMask = LayerMask.GetMask("Wall");
-        Debug.Log("Turtle startin dat world!");
+        anim = GetComponent<Animator>();
 
     }
 
@@ -32,7 +33,6 @@ public class EntityTurtle : Entity
         if (currentState == State.Idling)
         {
             StartCoroutine("SeekDestination");
-            Debug.Log("Turtle seeking dat destination!");
         }
 
         //If Entity sees wall, stop seeking
@@ -49,6 +49,8 @@ public class EntityTurtle : Entity
     private IEnumerator SeekDestination()
     {
         currentState = State.Seeking;
+        
+        //anim.Play(currentState.ToString());
         
         var destination = GetDestination();
         var direction = destination - this.transform.position;

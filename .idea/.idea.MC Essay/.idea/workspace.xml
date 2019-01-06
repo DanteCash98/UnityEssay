@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5e649df-ef3d-4997-ae23-4101caeb310e" name="Default Changelist" comment="Head push">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MC Essay/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MC Essay/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MC Essay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MC Essay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MC Essay/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MC Essay/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/turtle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/turtle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enitity_AI/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enitity_AI/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enitity_AI/EntityTurtle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enitity_AI/EntityTurtle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input_Listener/KeyboardListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input_Listener/KeyboardListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input_Listener/MouseListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input_Listener/MouseListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <ignored mask="*.unity" />
     <ignored path="Assets/Scenes/" />
@@ -74,19 +57,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enitity_AI/EntityTurtle.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+            <state relative-caret-position="154">
+              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
               <folding>
-                <marker date="1545412838500" expanded="true" signature="6:132" ph="..." />
-                <marker date="1545412838500" expanded="true" signature="168:2565" ph="{...}" />
-                <marker date="1545412838500" expanded="true" signature="193:229" ph="{...}" />
-                <marker date="1545412838500" expanded="true" signature="540:651" ph="{...}" />
-                <marker date="1545412838500" expanded="true" signature="683:1174" ph="{...}" />
-                <marker date="1545412838500" expanded="true" signature="731:856" ph="{...}" />
-                <marker date="1545412838500" expanded="true" signature="985:1150" ph="{...}" />
-                <marker date="1545412838500" expanded="true" signature="1221:2221" ph="{...}" />
-                <marker date="1545412838500" expanded="true" signature="1827:2141" ph="{...}" />
-                <marker date="1545412838500" expanded="true" signature="2331:2563" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="6:132" ph="..." />
+                <marker date="1545414626991" expanded="true" signature="168:2583" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="193:229" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="568:672" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="704:1137" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="752:819" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="948:1113" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="1184:2239" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="1845:2159" ph="{...}" />
+                <marker date="1545414626991" expanded="true" signature="2349:2581" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -347,12 +330,12 @@
       <workItem from="1545170935269" duration="589000" />
       <workItem from="1545241152727" duration="8574000" />
       <workItem from="1545331905902" duration="3422000" />
-      <workItem from="1545412426320" duration="693000" />
+      <workItem from="1545412426320" duration="1710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81483000" />
+    <option name="totallyTimeSpent" value="82500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -365,7 +348,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.09808102" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -619,19 +601,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enitity_AI/EntityTurtle.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        <state relative-caret-position="154">
+          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
           <folding>
-            <marker date="1545412838500" expanded="true" signature="6:132" ph="..." />
-            <marker date="1545412838500" expanded="true" signature="168:2565" ph="{...}" />
-            <marker date="1545412838500" expanded="true" signature="193:229" ph="{...}" />
-            <marker date="1545412838500" expanded="true" signature="540:651" ph="{...}" />
-            <marker date="1545412838500" expanded="true" signature="683:1174" ph="{...}" />
-            <marker date="1545412838500" expanded="true" signature="731:856" ph="{...}" />
-            <marker date="1545412838500" expanded="true" signature="985:1150" ph="{...}" />
-            <marker date="1545412838500" expanded="true" signature="1221:2221" ph="{...}" />
-            <marker date="1545412838500" expanded="true" signature="1827:2141" ph="{...}" />
-            <marker date="1545412838500" expanded="true" signature="2331:2563" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="6:132" ph="..." />
+            <marker date="1545414626991" expanded="true" signature="168:2583" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="193:229" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="568:672" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="704:1137" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="752:819" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="948:1113" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="1184:2239" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="1845:2159" ph="{...}" />
+            <marker date="1545414626991" expanded="true" signature="2349:2581" ph="{...}" />
           </folding>
         </state>
       </provider>
